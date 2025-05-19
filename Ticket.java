@@ -13,10 +13,10 @@ public class Ticket {
     public String getTicketId() {
         return ticketId;
     }
-    public Flight getflight() {
+    public Flight getFlight() {
         return flight;
     }
-    public Passenger passenger() {
+    public Passenger getPassenger() {
         return passenger;
     }
 }

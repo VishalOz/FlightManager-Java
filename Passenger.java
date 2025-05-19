@@ -19,5 +19,8 @@ public class Passenger {
     public String getEmail() {
         return email;
     }
+    public String toString() {
+        return name + " (" + email + ")";
+    }
 
 }

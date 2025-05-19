@@ -6,7 +6,7 @@ public class Flight {
     private int totalSeats;
     private int bookedSeats;
 
-    public Flight (String flightNumber, String origin, String destination, String date, int totalSeats) {
+    public Flight(String flightNumber, String origin, String destination, String date, int totalSeats) {
         this.flightNumber = flightNumber;
         this.origin = origin;
         this.destination = destination;
@@ -15,27 +15,30 @@ public class Flight {
         this.bookedSeats = 0;
     }
 
-    // getters
     public String getFlightNumber() {
         return flightNumber;
     }
+
     public String getOrigin() {
         return origin;
     }
+
     public String getDestination() {
         return destination;
     }
+
     public String getDate() {
         return date;
     }
+
     public int getTotalSeats() {
         return totalSeats;
     }
+
     public int getBookedSeats() {
         return bookedSeats;
     }
 
-    //extra methods
     public boolean hasAvailableSeats() {
         return bookedSeats < totalSeats;
     }
@@ -46,5 +49,10 @@ public class Flight {
 
     public void cancelSeat() {
         if (bookedSeats > 0) bookedSeats--;
+    }
+
+    public String toString() {
+        return flightNumber + ": " + origin + " -> " + destination + " on " + date +
+                " | Seats: " + bookedSeats + "/" + totalSeats;
     }
 }
